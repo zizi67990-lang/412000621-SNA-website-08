@@ -1,0 +1,22 @@
+
+:root { --bg:#f6f8fb; --card:#fff; --ink:#263445; --muted:#637386; --line:#dde5ee; --accent:#286b9d; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:system-ui,"Noto Sans TC","Microsoft JhengHei",sans-serif; }
+header { padding:20px max(24px,calc((100vw - 1220px)/2)); border-bottom:1px solid var(--line); background:var(--card); display:flex; align-items:center; justify-content:space-between; gap:12px; }
+header h1 { margin:0; font-size:1.35rem; } header span, .intro p, .help, .network-header span, footer { color:var(--muted); }
+main { max-width:1260px; margin:0 auto; padding:24px; } .intro h2 { margin:0; font-size:1.5rem; } .intro p { margin:4px 0 20px; }
+.workspace { display:grid; grid-template-columns:260px minmax(0,1fr); gap:16px; align-items:stretch; }
+.controls,.network-card { background:var(--card); border:1px solid var(--line); border-radius:12px; }
+.controls { padding:20px; } .controls h3 { font-size:1.1rem; margin:0 0 20px; }
+.controls label { display:block; font-size:.9rem; font-weight:600; margin-bottom:8px; }
+select { width:100%; border:1px solid #b9c9d8; border-radius:8px; background:#fff; color:var(--ink); font:inherit; padding:10px; }
+.help { font-size:.85rem; line-height:1.6; } .divider { border-top:1px solid var(--line); margin:20px 0; }
+.legend { display:flex; align-items:center; gap:9px; font-size:.85rem; color:var(--muted); }
+.dot-small,.dot-large { display:inline-block; border-radius:50%; background:#468abb; } .dot-small { width:10px; height:10px; } .dot-large { width:24px; height:24px; margin-left:10px; }
+.selected-info { background:#f2f7fc; border-radius:8px; font-size:.9rem; line-height:1.8; padding:12px; margin-top:20px; }
+.network-card { overflow:hidden; min-width:0; background:#080b10; border-color:#263342; color:#f2f5f8; }
+.network-header { padding:14px 18px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #263342; gap:12px; color:#f2f5f8; }
+.network-header span { color:#aab7c5; }
+#network { width:100%; height:580px; background:#080b10; }
+footer { border-top:1px solid var(--line); padding:24px; font-size:.85rem; text-align:center; }
+@media(max-width:700px) { header { padding:16px; flex-wrap:wrap; } main { padding:14px; } .workspace { grid-template-columns:1fr; } #network { height:460px; } }

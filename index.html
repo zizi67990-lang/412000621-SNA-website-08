@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的網絡｜SNA Network Explorer</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/dist/vis-network.min.js"></script>
+<script defer src="assets/network.js"></script>
+</head>
+<body>
+<header><h1>SNA Network Explorer</h1><span>王于榛（412000621）</span></header>
+<main>
+  <div class="intro"><h2>我的網絡</h2>
+  <p>無向網絡 · 15 個節點 · 20 條邊</p></div>
+  <div class="workspace">
+    <aside class="controls">
+      <h3>顯示設定</h3>
+      <label for="metric-select">中心性指標</label>
+      <select id="metric-select">
+        <option value="degree">Degree Centrality</option>
+        <option value="betweenness">Betweenness Centrality</option>
+        <option value="eigenvector">Eigenvector Centrality</option>
+      </select>
+      <p class="help">切換指標後，節點大小依分數重新調整。</p>
+      <div class="divider"></div>
+      <div class="legend"><span class="dot-small"></span>低分數 <span class="dot-large"></span>高分數</div>
+      <p class="help">在右邊拖曳節點、滾輪縮放。節點位置在切換指標時保持不變。</p>
+      <div id="selected-info" class="selected-info" aria-live="polite">點選節點可以查看其分數。</div>
+    </aside>
+    <section class="network-card">
+      <div class="network-header"><strong id="metric-title">Degree Centrality</strong><span>Interactive Network</span></div>
+      <div id="network" role="img" aria-label="互動式網絡圖"></div>
+    </section>
+  </div>
+</main>
+<footer>王于榛（412000621）｜由 Google Colab、NetworkX 和 vis-network 產生</footer>
+<script id="network-data" type="application/json">{"nodes": [{"id": "1", "label": "Acciaiuoli", "x": 328.5, "y": -68.27, "degree": 0.07142857142857142, "betweenness": 0.0, "eigenvector": 0.1321573195285342}, {"id": "2", "label": "Albizzi", "x": 146.86, "y": 159.39, "degree": 0.21428571428571427, "betweenness": 0.21245421245421245, "eigenvector": 0.2439605296754477}, {"id": "3", "label": "Barbadori", "x": -55.68, "y": -245.01, "degree": 0.14285714285714285, "betweenness": 0.09340659340659341, "eigenvector": 0.21170574706479847}, {"id": "4", "label": "Bischeri", "x": -286.12, "y": 166.61, "degree": 0.21428571428571427, "betweenness": 0.1043956043956044, "eigenvector": 0.2827943958713356}, {"id": "5", "label": "Castellani", "x": -283.67, "y": -209.0, "degree": 0.21428571428571427, "betweenness": 0.05494505494505495, "eigenvector": 0.25902003784235145}, {"id": "6", "label": "Ginori", "x": 304.43, "y": 295.26, "degree": 0.07142857142857142, "betweenness": 0.0, "eigenvector": 0.0749245316027793}, {"id": "7", "label": "Guadagni", "x": -69.33, "y": 247.79, "degree": 0.2857142857142857, "betweenness": 0.25457875457875456, "eigenvector": 0.28911715732265014}, {"id": "8", "label": "Lamberteschi", "x": -99.89, "y": 450.0, "degree": 0.07142857142857142, "betweenness": 0.0, "eigenvector": 0.08879253113499551}, {"id": "9", "label": "Medici", "x": 122.79, "y": -82.74, "degree": 0.42857142857142855, "betweenness": 0.521978021978022, "eigenvector": 0.4303154258349923}, {"id": "10", "label": "Pazzi", "x": 359.74, "y": -419.57, "degree": 0.07142857142857142, "betweenness": 0.0, "eigenvector": 0.044814939703863084}, {"id": "11", "label": "Peruzzi", "x": -405.2, "y": -16.38, "degree": 0.21428571428571427, "betweenness": 0.02197802197802198, "eigenvector": 0.2757224374104833}, {"id": "12", "label": "Ridolfi", "x": -62.05, "y": -61.64, "degree": 0.21428571428571427, "betweenness": 0.11355311355311355, "eigenvector": 0.3415544259074365}, {"id": "13", "label": "Salviati", "x": 235.22, "y": -264.49, "degree": 0.14285714285714285, "betweenness": 0.14285714285714288, "eigenvector": 0.14592084164171834}, {"id": "14", "label": "Strozzi", "x": -257.52, "y": -30.48, "degree": 0.2857142857142857, "betweenness": 0.10256410256410257, "eigenvector": 0.3559730326460451}, {"id": "15", "label": "Tornabuoni", "x": 21.92, "y": 78.54, "degree": 0.21428571428571427, "betweenness": 0.09157509157509158, "eigenvector": 0.325846704169574}], "edges": [{"from": "1", "to": "9"}, {"from": "2", "to": "6"}, {"from": "2", "to": "7"}, {"from": "2", "to": "9"}, {"from": "3", "to": "5"}, {"from": "3", "to": "9"}, {"from": "4", "to": "7"}, {"from": "4", "to": "11"}, {"from": "4", "to": "14"}, {"from": "5", "to": "11"}, {"from": "5", "to": "14"}, {"from": "7", "to": "8"}, {"from": "7", "to": "15"}, {"from": "9", "to": "12"}, {"from": "9", "to": "13"}, {"from": "9", "to": "15"}, {"from": "10", "to": "13"}, {"from": "11", "to": "14"}, {"from": "12", "to": "14"}, {"from": "12", "to": "15"}]}</script>
+</body>
+</html>
